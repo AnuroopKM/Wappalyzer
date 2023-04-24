@@ -1,0 +1,18 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class Wappalyzer1 {
+    public static void main(String[] args) {
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://www.wappalyzer.com");
+        driver.findElement(By.xpath("//header/div[1]/div[1]/div[1]/div[2]/button[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"list-item-50\"]/div")).click();
+        driver.findElement(By.xpath("//span[contains(text(),'Shopify')]")).click();
+        driver.findElement(By.xpath("//body/div[@id='_nuxt']/div[@id='_layout']/div[@id='app']/div[1]/main[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/a[1]")).click();
+        driver.findElement(By.linkText("Create a lead list")).click();
+        driver.findElement(By.xpath("//*[@id=\"list-370\"]/form/div/div/div/div[1]")).sendKeys("Java");
+        driver.quit();
+    }
+}
